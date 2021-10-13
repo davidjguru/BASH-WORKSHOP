@@ -39,3 +39,4 @@ Contains simple "Hello World" scripting, with some variations using parameters f
   * hello3.sh - Show salute using $* for all params from prompt.
   * hello4.sh - Show salute using $0 as script naming parameter.
   * hello5.sh - Show salute using $0, $* and `basename` command.
+  * hello6.sh - Show salute counting provided parameters with $*.
