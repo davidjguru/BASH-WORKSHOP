@@ -32,11 +32,20 @@ $ echo $PATH
 
 ## Folders 
 
+Summary of folders and resources contained in this repository.  
+
 ### Initial 
-Contains simple "Hello World" scripting, with some variations using parameters from prompt. 
+
+Contains simple "Hello World" scripting, with some variations using parameters. 
   * hello1.sh - Show "Hello World" by prompt.
   * hello2.sh - Show salute using $1 param from prompt.
   * hello3.sh - Show salute using $* for all params from prompt.
   * hello4.sh - Show salute using $0 as script naming parameter.
   * hello5.sh - Show salute using $0, $* and `basename` command.
   * hello6.sh - Show salute counting provided parameters with $*.
+
+### Variables
+
+Contains scripts that work with variables in different ways. Let's see.     
+  * variables1.sh - Creating variables defined by the user.   
+  * variables2.sh - Working with arrays: define, get item, unset, size and loop.  
