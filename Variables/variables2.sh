@@ -14,6 +14,8 @@
 # https://www.therussianlullaby.com
 #------------------------------------------------------------------------------
 #
+
+# Creating a new variable as an indexed array.
 my_array=(1 2 3 4 5 'six' 'seven' 8 9 'ten') # Load values in a variable.
 
 echo "The First item in array:"
@@ -45,3 +47,25 @@ echo "Now unsetting all values in array."
 unset my_array
 echo "Current values: " ${my_array[*]}
 echo "Current size: " ${#my_array[@]}
+
+# But you can use the declare command, too.
+echo "Now we're creating a new pair of arrays using 'declare' command."
+declare -a indexed_array # Create a new basic array. 
+declare -A associative_array # Create a new associative array. 
+
+echo "Now we're gonna to populate the new arrays and show the values on them."
+indexed_array=( I You He She It We You)
+associative_array[keyone]="valueone"
+associative_array[keytwo]="valuetwo"
+echo "The indexed array values are: " ${indexed_array[@]}
+echo "The associative array values are: " ${associative_array[@]}
+
+echo "And now adding new values to the arrays." 
+indexed_array+=(They)
+associative_array+=([keythree]=valuethree [keyfour]=valuefour)
+echo "The indexed array updated values are: " ${indexed_array[@]}
+echo "The associative array updated values are: " ${associative_array[@]}
+
+
+
+
