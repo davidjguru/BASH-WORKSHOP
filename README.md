@@ -48,4 +48,6 @@ Contains simple "Hello World" scripting, with some variations using parameters.
 
 Contains scripts that work with variables in different ways. Let's see.     
   * variables1.sh - Creating variables defined by the user.   
-  * variables2.sh - Working with arrays: define, get/set item, unset, size and loop. Uses `declare` command.    
+  * variables2.sh - Working with arrays: define, get/set item, unset, size and loop. Uses `declare` command.
+  * variables3.sh - Test environment variables and check the scope of a variable between scripts.
+  * variables3_secondary.sh - Gives support to the previous variables3.sh script.     
