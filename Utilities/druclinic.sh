@@ -95,10 +95,27 @@ counting_config_files () {
       echo -e " ${YELLOW} Number of config files:${NC} $config_files" 
       echo -e " ${YELLOW} Number of content types:${NC} $content_types"
       echo -e " ${YELLOW} Number or paragraphs:${NC} $paragraphs_items"
+      echo -e  "\n\n\n\n"
   else
-    echo -e " ${YELLOW} Info:${NC} We could not find any configuration files, the usual addresses do not exist.."
+    echo -e " ${YELLOW} Info:${NC} We could not find any configuration files, the usual addresses do not exist..."
   fi
 }
+
+# Calculating space use
+calculating_space_use () {
+  total_size=$(du -sh ./ 2> /dev/null)
+  partial_size=$(du -sh ./* 2> /dev/null)
+  web_size=$(du -sh ./web/* 2> /dev/null)
+  files_size=$(du -sh ./web/sites/default/files/ 2> /dev/null)
+  echo -e " ${YELLOW} Total size:${NC} $total_size\n\n" 
+  echo -e " ${YELLOW} Size partial by folder: \n\n${NC} $partial_size\n\n" 
+  echo -e " ${YELLOW} Size of the /web folder: \n\n${NC} $web_size\n\n"
+  echo -e " ${YELLOW} Size of the /files folder:\n\n${NC} $files_size"
+  echo -e  "\n\n\n\n"
+}
+
+# Calling functions zone
 load_colors
 print_splash
 counting_config_files
+calculating_space_use
