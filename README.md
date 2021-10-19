@@ -34,7 +34,7 @@ $ echo $PATH
 
 Summary of folders and resources contained in this repository.  
 
-### Initial 
+### 01. Initial 
 
 Contains simple "Hello World" scripting, with some variations using parameters. 
   * hello1.sh - Show "Hello World" by prompt.
@@ -44,10 +44,20 @@ Contains simple "Hello World" scripting, with some variations using parameters.
   * hello5.sh - Show salute using $0, $* and `basename` command.
   * hello6.sh - Show salute counting provided parameters with $*.
 
-### Variables
+### 02. Variables
 
 Contains scripts that work with variables in different ways. Let's see.     
   * variables1.sh - Creating variables defined by the user.   
   * variables2.sh - Working with arrays: define, get/set item, unset, size and loop. Uses `declare` command.
   * variables3.sh - Test environment variables and check the scope of a variable between scripts.
   * variables3_secondary.sh - Gives support to the previous variables3.sh script.     
+
+### 03. Parameters
+
+Contains scripts and resources that working with parameters from console and reading values in prompt. 
+  * greetings.sh - Takes input from console, read and return a response.  
+
+### 04. Utilites
+
+This folder stores some tools based in bash, little interesting scripts to perform common automatic tasks.  
+* druclinic.sh - Executes some basic inspections within a standarized Drupal folder and get values.  
