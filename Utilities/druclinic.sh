@@ -97,21 +97,43 @@ counting_config_files () {
       echo -e " ${YELLOW} Number or paragraphs:${NC} $paragraphs_items"
       echo -e  "\n\n\n\n"
   else
-    echo -e " ${YELLOW} Info:${NC} We could not find any configuration files, the usual addresses do not exist..."
+    echo -e " ${ORANGE} Warning:${NC} We could not find any configuration files, the usual addresses do not exist.\n\n"
   fi
 }
 
 # Calculating space use
 calculating_space_use () {
-  total_size=$(du -sh ./ 2> /dev/null)
-  partial_size=$(du -sh ./* 2> /dev/null)
-  web_size=$(du -sh ./web/* 2> /dev/null)
-  files_size=$(du -sh ./web/sites/default/files/ 2> /dev/null)
-  echo -e " ${YELLOW} Total size:${NC} $total_size\n\n" 
-  echo -e " ${YELLOW} Size partial by folder: \n\n${NC} $partial_size\n\n" 
-  echo -e " ${YELLOW} Size of the /web folder: \n\n${NC} $web_size\n\n"
-  echo -e " ${YELLOW} Size of the /files folder:\n\n${NC} $files_size"
-  echo -e  "\n\n\n\n"
+  root_folder="./web/"
+  
+  if [ ! -d $root_folder ]
+    then
+      root_folder="./root/"
+      if [ ! -d $root_folder ]
+        then
+          root_folder="zero"
+          echo -e " ${YELLOW} Info:${NC} Directory root is not available." 
+      else 
+        echo -e " ${YELLOW} Info:${NC} Directory root named as 'root'."
+      fi
+  else
+     echo -e " ${YELLOW} Info:${NC} Directory root named as 'web'."
+  fi
+  
+  if [ $root_folder != "zero" ]
+    then 
+      total_size=$(du -sh ./ 2> /dev/null)
+      partial_size=$(du -sh ./* 2> /dev/null)
+      web_size=$(du -sh $root_folder* 2> /dev/null)
+      files_size=$(du -sh $root_folder/sites/default/files/ 2> /dev/null)
+      echo -e " ${YELLOW} Total size:${NC} $total_size\n\n" 
+      echo -e " ${YELLOW} Size partial by folder: \n\n${NC} $partial_size\n\n" 
+      echo -e " ${YELLOW} Size of the root folder: \n\n${NC} $web_size\n\n"
+      echo -e " ${YELLOW} Size of the /files folder:\n\n${NC} $files_size"
+      echo -e  "\n\n\n\n"
+  else 
+    echo -e " ${ORANGE} Warning:${NC} There is no root folder available."
+    echo -e "  The project was not yet mounted by Composer or the name differs from the usual ones.\n\n" 
+  fi
 }
 
 # Calling functions zone
