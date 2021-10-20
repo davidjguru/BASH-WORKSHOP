@@ -55,9 +55,10 @@ Contains scripts that work with variables in different ways. Let's see.
 ### 03. Parameters
 
 Contains scripts and resources that working with parameters from console and reading values in prompt. 
-  * greetings.sh - Takes input from console, read and return a response.  
+  * greetings1.sh - Takes input from console, read and return a response.  
+  * greetings2.sh - Read the input using the `read -p` command and option.  
 
 ### 04. Utilites
 
 This folder stores some tools based in bash, little interesting scripts to perform common automatic tasks.  
-* druclinic.sh - Executes some basic inspections within a standarized Drupal folder and get values.  
+  * druclinic.sh - Executes some basic inspections within a standarized Drupal folder and get values.  
