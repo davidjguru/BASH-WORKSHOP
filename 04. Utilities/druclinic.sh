@@ -76,13 +76,13 @@ counting_config_files () {
   no_config=1
   if [ -d $config_path ] 
     then
-      echo -e " ${YELLOW} Info:${NC} Directory /config/sync exists." 
+      echo -e " ${CYAN} Info:${NC} Directory /config/sync exists." 
   else
-      echo -e " ${YELLOW} Info:${NC} Directory /config/sync does not exists. Going to /files folder."
+      echo -e " ${CYAN} Info:${NC} Directory /config/sync does not exists. Going to /files folder."
       config_path="./web/sites/default/files/sync"
       if [ ! -d $config_path ]
         then
-          echo -e " ${YELLOW} Info:${NC} Directory /files/sync does not exist either."
+          echo -e " ${CYAN} Info:${NC} Directory /files/sync does not exist either."
           no_config=0
       fi
   fi
@@ -92,9 +92,9 @@ counting_config_files () {
       config_files=$(ls -lah $config_path 2> /dev/null | wc -l)
       content_types=$(ls -lah $config_path/node.type.* 2> /dev/null | wc -l)
       paragraphs_items=$(ls -lah $config_path/paragraphs.paragraphs_type.*  2> /dev/null | wc -l)
-      echo -e " ${YELLOW} Number of config files:${NC} $config_files" 
-      echo -e " ${YELLOW} Number of content types:${NC} $content_types"
-      echo -e " ${YELLOW} Number or paragraphs:${NC} $paragraphs_items"
+      echo -e " ${CYAN} Number of config files:${NC} $config_files" 
+      echo -e " ${CYAN} Number of content types:${NC} $content_types"
+      echo -e " ${CYAN} Number or paragraphs:${NC} $paragraphs_items"
       echo -e  "\n\n\n\n"
   else
     echo -e " ${ORANGE} Warning:${NC} We could not find any configuration files, the usual addresses do not exist.\n\n"
@@ -111,12 +111,12 @@ calculating_space_use () {
       if [ ! -d $root_folder ]
         then
           root_folder="zero"
-          echo -e " ${YELLOW} Info:${NC} Directory root is not available." 
+          echo -e " ${CYAN} Info:${NC} Directory root is not available." 
       else 
-        echo -e " ${YELLOW} Info:${NC} Directory root named as 'root'."
+        echo -e " ${CYAN} Info:${NC} Directory root named as 'root'."
       fi
   else
-     echo -e " ${YELLOW} Info:${NC} Directory root named as 'web'."
+     echo -e " ${CYAN} Info:${NC} Directory root named as 'web'."
   fi
   
   if [ $root_folder != "zero" ]
@@ -125,10 +125,10 @@ calculating_space_use () {
       partial_size=$(du -sh ./* 2> /dev/null)
       web_size=$(du -sh $root_folder* 2> /dev/null)
       files_size=$(du -sh $root_folder/sites/default/files/ 2> /dev/null)
-      echo -e " ${YELLOW} Total size:${NC} $total_size\n\n" 
-      echo -e " ${YELLOW} Size partial by folder: \n\n${NC} $partial_size\n\n" 
-      echo -e " ${YELLOW} Size of the root folder: \n\n${NC} $web_size\n\n"
-      echo -e " ${YELLOW} Size of the /files folder:\n\n${NC} $files_size"
+      echo -e " ${CYAN} Total size:${NC} $total_size\n\n" 
+      echo -e " ${CYAN} Size partial by folder: \n\n${NC} $partial_size\n\n" 
+      echo -e " ${CYAN} Size of the root folder: \n\n${NC} $web_size\n\n"
+      echo -e " ${CYAN} Size of the /files folder:\n\n${NC} $files_size"
       echo -e  "\n\n\n\n"
   else 
     echo -e " ${ORANGE} Warning:${NC} There is no root folder available."
