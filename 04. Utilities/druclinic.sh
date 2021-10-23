@@ -139,5 +139,11 @@ calculating_space_use () {
 # Calling functions zone
 load_colors
 print_splash
+echo -e "-----------------------------------------------------------------------------------------------"
+echo -e " ${CYAN} After initial loads, we're going to inspect info about config files and content types...${NC}\n\n\n"
+echo -e "-----------------------------------------------------------------------------------------------"
+sleep 2
 counting_config_files
+echo -e " ${CYAN} After initial loads, we're going to inspect info about config files and content types...\n\n\n"
+sleep 2
 calculating_space_use
