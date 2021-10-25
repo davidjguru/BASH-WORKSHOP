@@ -56,9 +56,49 @@ Contains scripts that work with variables in different ways. Let's see.
 
 Contains scripts and resources that working with parameters from console and reading values in prompt. 
   * greetings1.sh - Takes input from console, read and return a response.  
-  * greetings2.sh - Read the input using the `read -p` command and option.  
+  * greetings2.sh - Read the input using the `read -p` command and option `-p`.  
 
 ### 04. Utilites
 
 This folder stores some tools based in bash, little interesting scripts to perform common automatic tasks.  
   * druclinic.sh - Executes some basic inspections within a standarized Drupal folder and get values.  
+
+## Remember
+Here are some useful tables with interesting information to remember when you'll build some stuff for bash.  
+
+### Positional Parameters
+
+| Option | Description |
+--------|-------------|
+| $0 | Represents the command or script. |
+| $1 to $9 | Represents arguments 1 through 9. |
+| ${10} and so on| Represents arguments from item 10 and further. |
+| $# | Represents the total number of arguments. |
+| $* | Represents all arguments expanded as all parameters added together. |
+| $@ | Represents all arguments expanded as a list of separated parameters. |
+| $$ | Represents the PID of a running script. |
+
+**More Info:**  
+  * [https://bash.cyberciti.biz/guide/How_to_use_positional_parameters](https://bash.cyberciti.biz/guide/How_to_use_positional_parameters)  
+
+### Standard for Options  
+
+These are some of the commonly used options when you're implementing options for your custom command / function in Bash. 
+
+| Option | Description |
+--------|-------------|
+| -a | List all items. |
+| -c | Get a count of all items. |
+| -d | Output directory. |
+| -e | Expand items. |
+| -f | Specify a file. |
+| -h | Show the help page. |
+| -i | Ignore the character case. |
+| -l | List a text. |
+| -o | Send output to a file. |
+| -q | Keep silent; don't ask the user. |
+| -r | Process something recursively. |
+| -s | Use stealth mode. |
+| -v | Use verbose mode. |
+| -x | Specify an executable. |
+| -y | Accept without prompting me. |
