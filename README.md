@@ -70,16 +70,20 @@ Here are some useful tables with interesting information to remember when you'll
 
 | Option | Description |
 --------|-------------|
+| $! | Return the PID of the most recent command. |
+| $? | Gets the most recent exit status |
 | $0 | Represents the command or script. |
 | $1 to $9 | Represents arguments 1 through 9. |
 | ${10} and so on| Represents arguments from item 10 and further. |
 | $# | Represents the total number of arguments. |
 | $* | Represents all arguments expanded as all parameters added together. |
 | $@ | Represents all arguments expanded as a list of separated parameters. |
-| $$ | Represents the PID of a running script. |
+| $$ | Represents the PID of the current shell. |
 
 **More Info:**  
   * [https://bash.cyberciti.biz/guide/How_to_use_positional_parameters](https://bash.cyberciti.biz/guide/How_to_use_positional_parameters)  
+  * [https://www.gnu.org/software/bash/manual/html_node/Variable-Index.html#Variable-Index_vr_symbol-3](https://www.gnu.org/software/bash/manual/html_node/Variable-Index.html#Variable-Index_vr_symbol-3)  
+  * [https://www.gnu.org/software/bash/manual/html_node/Special-Parameters.html](https://www.gnu.org/software/bash/manual/html_node/Special-Parameters.html)  
 
 ### Standard for Options  
 
