@@ -256,5 +256,5 @@ print_messages S4
 calculating_space_use
 sleep 2
 
-# Clean the report file deleting colors codes.
+# Clean the report file deleting color codes.
 sed -i -r "s/\x1B\[(([0-9]+)(;[0-9]+)*)?[m,K,H,f,J]//g" ./druclinic.txt
