@@ -22,9 +22,13 @@ read -p "Which file type to backup? Please introduce extension..." file_suffix
 read -p "Which folder to backup to? Please introduce destiny..." dir_name
 
 # Create directory if not exists.
-test -d $HOME/$dir_name || mkdir -m 700 $HOME/$dir_name
+destiny_path=$HOME/$dir_name
+test -d $destiny_path || mkdir -m 700 $destiny_path
 
 # Execute search matching criteria and purging the same backup folder.
-find $HOME -path $HOME/$dir_name -prune -o -name "*$file_suffix" \
--exec cp {} $HOME/$dir_name/ \;
+find $HOME -path $destiny_path -prune -o -name "*$file_suffix" \
+-exec cp {} $destiny_path/ \;
+
+# Gives a summary for the backup works.
+echo -e "\nWere copied $(ls -la $destiny_path | wc -l) files in $destiny_path."
 exit 0
