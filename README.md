@@ -30,6 +30,24 @@ $ echo $PATH
 /home/davidjguru/workspace/training/bash/bin:.:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 ```
 
+## Automated Testing for Bash 
+
+You can do Testing Driven Development in Bash (TDD) using a tool called "Bats". This will allow you to enable test and check your bash code.  
+* [https://bats-core.readthedocs.io/](https://bats-core.readthedocs.io/)  
+* [https://github.com/bats-core/bats-core](https://github.com/bats-core/bats-core)  
+  
+Installing in Ubuntu:  
+
+```bash
+$ git clone https://github.com/bats-core/bats-core.git
+$ cd bats-core
+$ sudo ./install.sh /usr/local
+```
+
+Testing Usage:  
+After installation you can view manual pages with: `man 1 bats` (usage manual) and `man 7 bats` (writing test files manual). 
+Also, you can view the available command line options that Bats supports by calling Bats with the `-h` or `--help`.  
+
 ## Folders 
 
 Summary of folders and resources contained in this repository.  
