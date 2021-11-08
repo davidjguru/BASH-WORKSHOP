@@ -18,4 +18,4 @@
 # Last Edited: November 08 2021
 
 read -p "Which server should be pinged? " server_address
-ping -c3 $server_address 2>1 > /dev/null || echo "Server not responding..."
+ping -c3 $server_address >/dev/null 2>&1 || echo "Server not responding..."
