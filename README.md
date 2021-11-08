@@ -2,6 +2,9 @@
 Storage for some scripts used in the Bash Scripting Workshop (2021 - 2022).   
 
 ## Initial Steps 
+
+### Executing your scripts from any folder  
+
 Ok, In order to get all our scripts available from any direction, we have to load our current working address in the `$PATH` environment variable.   
 This change can be executed by doing something like:   
 
@@ -30,7 +33,7 @@ $ echo $PATH
 /home/davidjguru/workspace/training/bash/bin:.:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 ```
 
-## Automated Testing for Bash 
+### Executing automated testing for your scripts
 
 You can do Testing Driven Development in Bash (TDD) using a tool called "Bats". This will allow you to enable test and check your bash code.  
 * [https://bats-core.readthedocs.io/](https://bats-core.readthedocs.io/)   
@@ -53,6 +56,30 @@ When you finished an iteration over your script -having your defined tests- laun
 ```bash
 $ bats two_fer.bats 
 ```
+
+### Debugging your scripts 
+
+Just like in others languages, you can do some debugging in your IDE. For VSCode, you can install the `rogalmic.bash-debug` extension and after install it, you only have to enable the classical `launch.json`file in the root of your folder, just inside a new folder `vscode`.  
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Bash-Debug",
+            "type": "bashdb",
+            "request": "launch",
+            "program": "${command:SelectScriptName}",
+            "commandLineArguments": "",
+            "linux": {
+                "bashPath": "bash"
+            }
+        }
+    ]
+}
+```
+
+Then you'll can enable debugging putting some breakpoints in your code and calling F5.  
 
 ## Folders 
 
