@@ -95,6 +95,9 @@ Contains simple "Hello World" scripting, with some variations using parameters.
   * hello5.sh - Show salute using $0, $* and `basename` command.
   * hello6.sh - Show salute counting provided parameters with $*.
 
+**Sandbox:** Contain some exercises as  
+  * hello_world.sh / hello_world.bats  
+
 ### 02. Variables
 
 Contains scripts that work with variables in different ways. Let's see.     
@@ -112,11 +115,22 @@ Contains scripts and resources that working with parameters from console and rea
   * greetings4.sh - Read input and hiding entered characters.  
   * greetings5.sh - Read input and processing options from console.  
 
-### 04. Utilites
+**Sandbox:** Contain some exercises as  
+  * error_handling.sh / error_handling.bats  
+  
+### 04. Looping
+
+
+**Sandbox:** Contain some exercises as  
+  * raindrop.sh
+### 05. Utilites
 
 This folder stores some tools based in bash, little interesting scripts to perform common automatic tasks.  
   * bashup.sh - Execute backups for files managing extensions and folders.  
   * druclinic.sh - Executes some basic inspections within a standarized Drupal folder and get values.  
+
+### 06. Reading Materials
+
 
 ## Remember
 Here are some useful tables with interesting information to remember when you'll build some stuff for bash.  
