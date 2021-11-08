@@ -33,8 +33,8 @@ $ echo $PATH
 ## Automated Testing for Bash 
 
 You can do Testing Driven Development in Bash (TDD) using a tool called "Bats". This will allow you to enable test and check your bash code.  
-* [https://bats-core.readthedocs.io/](https://bats-core.readthedocs.io/)  
-* [https://github.com/bats-core/bats-core](https://github.com/bats-core/bats-core)  
+* [https://bats-core.readthedocs.io/](https://bats-core.readthedocs.io/)   
+* [https://github.com/bats-core/bats-core](https://github.com/bats-core/bats-core)   
   
 Installing in Ubuntu:  
 
@@ -47,6 +47,12 @@ $ sudo ./install.sh /usr/local
 Testing Usage:  
 After installation you can view manual pages with: `man 1 bats` (usage manual) and `man 7 bats` (writing test files manual). 
 Also, you can view the available command line options that Bats supports by calling Bats with the `-h` or `--help`.  
+
+When you finished an iteration over your script -having your defined tests- launch the tests by doing:  
+
+```bash
+$ bats two_fer.bats 
+```
 
 ## Folders 
 
