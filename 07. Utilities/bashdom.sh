@@ -46,3 +46,19 @@ cd /boot && ls -la
 # List all directories as a tree, but without using 'tree' command if you didn't install this.
 find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/| - \1/"
 
+# It will show the consumption of Storage in your System from /.
+cd / && sudo du -shxc * --exclude=proc
+
+# 0	bin
+# 149M	boot
+# [...]
+# 0	tmp
+# 706M	usr
+# 287M	var
+# 1.2G	total
+
+# Get available amount of memory in the system in a human readable format.
+free -h
+#               total        used        free      shared  buff/cache   available
+# Mem:           31Gi        10Gi       6,8Gi       2,1Gi        13Gi        18Gi
+# Swap:         2,0Gi          0B       2,0Gi
