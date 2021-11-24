@@ -118,16 +118,19 @@ Contains scripts and resources that working with parameters from console and rea
 **Sandbox:** Contain some exercises as  
   * error_handling.sh / error_handling.bats  
   
-### 04. Looping
-
+### 04. Conditions and Loops
 
 **Sandbox:** Contain some exercises as  
-  * raindrop.sh
+  * acronym.sh / acronym.bats  
+  * raindrop.sh / raindrop.bats  
 ### 05. Utilites
 
 This folder stores some tools based in bash, little interesting scripts to perform common automatic tasks.  
   * bashup.sh - Execute backups for files managing extensions and folders.  
   * druclinic.sh - Executes some basic inspections within a standarized Drupal folder and get values.  
+  * bashware.sh - Get a summary about hardware from bash.  
+  * bashdom.sh - Gathering random commands for a Linux distribution.  
+  * bashing.sh - aunch ping from console to remote server.  
 
 ### 06. Reading Materials
 
